@@ -1,0 +1,22 @@
+{
+  "name": "roomify/openshift-php-client",
+  "description": "Openshift PaaS PHP Client",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Roomify",
+      "email": "hello@roomify.us",
+      "homepage": "https://roomify.us",
+      "role": "Developing Organization"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "another-vendor/package": "1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Roomify\\Openshift\\": "src"
+    }
+  }
+}
