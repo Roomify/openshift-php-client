@@ -408,13 +408,22 @@ class App
         return $data;
     }
 
-    public function addAlias($alias)
+    public function addAlias($alias, $ssl_certificate = NULL, $private_key = NULL, $pass_phrase = NULL)
     {
         if (!$alias) throw new \Exception("Alias is missing", 1);
         $openshift = ObjectBroker::get("openshift");
         $dispatcher = $openshift->getDispatcher();
-        $url = "https://openshift.redhat.com/broker/rest/domains/{$this->domainId}/applications/{$this->appName}/events";
-        $params = array("event" => "add-alias", "alias" => $alias);
+        $url = "https://openshift.redhat.com/broker/rest/application/{$this->id}/aliases";
+        $params = array("id" => $alias);
+
+        if (isset($ssl_certificate) && isset($private_key)) {
+          $params['ssl_certificate'] = $ssl_certificate;
+          $params['private_key'] = $private_key;
+          if (isset($pass_phrase)) {
+            $params['pass_phrase'] = $pass_phrase;
+          }
+        }
+
         $data = $dispatcher->post($url, $params);
         return $data;
     }
