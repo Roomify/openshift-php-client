@@ -27,7 +27,7 @@ class App
     private $gearProfile;
     private $gitUrl;
     private $sshUrl;
-    private $uuid;
+    private $id;
     private $scalable;
     private $cartridges;
     private $_cartridges;
@@ -104,9 +104,9 @@ class App
         return $this->sshUrl;
     }
 
-    public function getUuid()
+    public function getId()
     {
-        return $this->uuid;
+        return $this->id;
     }
 
     public function getScalable()
@@ -187,9 +187,9 @@ class App
         $this->sshUrl = $data;
     }
 
-    public function setUuid($data)
+    public function setId($data)
     {
-        $this->uuid = $data;
+        $this->id = $data;
     }
 
     public function setScalable($data)
@@ -224,7 +224,7 @@ class App
             $this->setGitUrl($propBundle->git_url);
             $this->setSshUrl($propBundle->ssh_url);
             $this->setScalable($propBundle->scalable);
-            $this->setUuid($propBundle->uuid);
+            $this->setId($propBundle->id);
 
             $this->makeZombie();
         } else {
@@ -267,7 +267,7 @@ class App
         $this->setGitUrl($propBundle->git_url);
         $this->setSshUrl($propBundle->ssh_url);
         $this->setScalable($propBundle->scalable);
-        $this->setUuid($propBundle->uuid);
+        $this->setId($propBundle->id);
 
         $this->makeZombie();
     }
