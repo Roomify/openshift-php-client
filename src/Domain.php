@@ -8,7 +8,9 @@
  * @link https://github.com/hasinhayder/openshift-php-client
  */
 
-namespace OpenShift;
+namespace Roomify\Openshift;
+
+use Roomify\Openshift\App;
 
 class Domain
 {

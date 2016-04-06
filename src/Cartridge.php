@@ -9,7 +9,7 @@
  */
 
 
-namespace OpenShift;
+namespace Roomify\OpenShift;
 
 class Cartridge
 {

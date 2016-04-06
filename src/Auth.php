@@ -8,7 +8,7 @@
  * @link https://github.com/hasinhayder/openshift-php-client
  */
 
-namespace OpenShift;
+namespace Roomify\OpenShift;
 
 class Auth
 {

@@ -8,7 +8,12 @@
  * @link https://github.com/hasinhayder/openshift-php-client
  */
 
-namespace OpenShift;
+namespace Roomify\OpenShift;
+
+use Roomify\OpenShift\Auth;
+use Roomify\OpenShift\Dispatcher;
+use Roomify\OpenShift\DomainManager;
+use Roomify\OpenShift\ObjectBroker;
 
 class Client
 {
