@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Roomify\\Openshift\\": "src"
+      "Roomify\\OpenShift\\": "src"
     }
   }
 }
