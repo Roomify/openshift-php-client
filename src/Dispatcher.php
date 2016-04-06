@@ -66,15 +66,16 @@ class Dispatcher
                 $password = $auth->getPassword();
                 $process = curl_init($requestUrl);
                 //curl_setopt($process, CURLOPT_HEADER, 1);
+                curl_setopt($process, CURLOPT_RETURNTRANSFER, TRUE);
+                curl_setopt($process, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
                 curl_setopt($process, CURLOPT_USERPWD, $username . ":" . $password);
-                curl_setopt($process, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
                 curl_setopt($process, CURLOPT_TIMEOUT, 300);
                 if (($requestType == "POST" || $requestType == "PUT") && $requestParams)
                     curl_setopt($process, CURLOPT_POSTFIELDS, $requestParams);
-                curl_setopt($process, CURLOPT_RETURNTRANSFER, TRUE);
                 curl_setopt($process, CURLOPT_CUSTOMREQUEST, $requestType);
                 curl_setopt($process, CURLOPT_SSL_VERIFYHOST, 0);
                 curl_setopt($process, CURLOPT_SSL_VERIFYPEER, 0);
+                curl_setopt($process, CURLOPT_HTTPHEADER, array('Accept: application/json'));
                 $data = curl_exec($process);
                 return $data;
             } else {
