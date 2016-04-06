@@ -9,18 +9,13 @@
  * @link https://github.com/hasinhayder/openshift-php-client
  */
 
-require_once 'autoloader.php';
+// The following assumes you have the library installed with composer.
 
-//Autoloader
-$autoloader = new SplClassLoader("OpenShift","src");
-$autoloader->register();
-
-
-use OpenShift\Client as OpenShift;
+use \Roomify\OpenShift\Client as OpenShift;
 
 $username = "masnun@gmail.com"; // your account, most likely your email address
 $password = "mySuperCryptikPa55W0rD!"; // your password
-$openshift = new OpenShift($username,$password);
+$openshift = new OpenShift($username, $password);
 
 echo "<pre>";
 
