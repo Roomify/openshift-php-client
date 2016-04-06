@@ -4,10 +4,22 @@
   "license": "MIT",
   "authors": [
     {
+      "name": "Hasin Hayder",
+      "email": "hasin@leevio.com",
+      "homepage": "www.hasin.me",
+      "role": "Author"
+    },
+    {
+      "name": "Abu Ashraf Masnun",
+      "email": "masnun@gmail.com",
+      "homepage": "www.masnun.me",
+      "role": "Author"
+    },
+    {
       "name": "Roomify",
       "email": "hello@roomify.us",
       "homepage": "https://roomify.us",
-      "role": "Developing Organization"
+      "role": "Maintaining Organization"
     }
   ],
   "require": {
